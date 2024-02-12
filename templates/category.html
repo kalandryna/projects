@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>category</title>
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+
+    </head>
+    <body>
+        <h1 class="mainname">Anagram Zoo</h1>
+        <div class="centered-block">
+
+            <form action="/play" method="post">
+                <div class="drop-menu">
+                    <select id="category" name="category">
+                        <option value="choose" selected disabled class="opt">Choose a category</option>
+                        <option value="all" class="opt">All together</option>
+                        <option value="mammals" class="opt">Mammals</option>
+                        <option value="birds" class="opt">Birds</option>
+                        <option value="fish" class="opt">Fish and marine animals</option>
+                        <option value="rept-amph" class="opt">Reptiles and amphibians</option>
+                        <option value="insects" class="opt">Insects</option>
+                      </select>
+                    <input type="hidden" name="language" value="{{language}}">
+                    <input type="submit" class="submit-categ" value="Play!">
+                </div>
+            </form>
+        </div>
+        <div class='link-container'>
+            <a href="{{url_for('category', language='belarusian')}}" class="inside-link">Беларуская</a>
+            <a href="{{url_for('category', language='russian')}}" class="inside-link">Русский</a>
+        </div>
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
+

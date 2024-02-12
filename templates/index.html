@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>language</title>
+        <link href="/static/styles.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <h1 class="mainname">Anagram Zoo</h1>
+
+        <div class="centered-block transparent">
+
+            <h2 class='movy'>Choose a language / Выберыце мову / Выберите язык</h2>
+
+            <div class='buttons'>
+
+                <a href="{{url_for('category', language='english')}}" class="button">English</a>
+                <a href="{{url_for('category', language='belarusian')}}" class="button">Беларуская</a>
+                <a href="{{url_for('category', language='russian')}}" class="button">Русский</a>
+
+            </div>
+        </div>
+
+    </body>

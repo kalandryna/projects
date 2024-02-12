@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>category</title>
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <h1 class="mainname">Anagram Zoo</h1>
+        <div class="centered-block">
+
+
+            <form action="/play" method="post">
+                <div class="drop-menu">
+                    <select id="category-bel" name="category-bel">
+                        <option value="choose-bel" selected disabled>Выберыце катэгорыю</option>
+                        <option value="all-bel" class="opt">Усе разам</option>
+                        <option value="mammals-bel" class="opt">Звяры</option>
+                        <option value="birds-bel" class="opt">Птушкі</option>
+                        <option value="fish-bel" class="opt">Рыбы</option>
+                        <option value="rept-amph-bel" class="opt">Паўзуны і земнаводныя</option>
+                        <option value="insects-bel" class="opt">Казуркі і ніжэйшыя</option>
+                      </select>
+                <input type="hidden" name="language" value="{{language}}">
+                <input type="submit" class="submit-categ" value="Гуляць!">
+                </div>
+            </form>
+        </div>
+        <div class='link-container'>
+            <a href="{{url_for('category', language='english')}}" class="inside-link">English</a>
+            <a href="{{url_for('category', language='russian')}}" class="inside-link">Русский</a>
+        </div>
+
+
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>

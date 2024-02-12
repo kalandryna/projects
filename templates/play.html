@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>play</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="/static/styles.css" rel="stylesheet">
+
+
+    </head>
+    <body>
+        <h1 class="mainname">Anagram Zoo</h1>
+        <div class='empty-line'></div>
+        <div class="centered-block no-padding">
+            <img src="/static/icon-clue.png" alt="My Icon" class=little-link id='popup-image' data-toggle='popover' data-placement="bottom" data-content='{{hint}}'>
+            <h2 class='anagram-number'>{{number}}/5</h2>
+            <h2 class='anagram-text'>{{anagram}}</h2>
+            <div>{{hidden_message}}</div>
+            <form action="/playing" class='padding-form' method="post">
+                <input type="text" id="solution" name="solution" autocomplete="off" autofocus required>
+                <input type="hidden" name="language" value="{{language}}">
+                <input type="submit" class="submit-categ" value="{{check}}">
+                </div>
+            </form>
+
+        </div>
+
+        <a href="/clear" class="little-link2" onclick="return confirm('{{warning}}');">{{home}}</a>
+
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>

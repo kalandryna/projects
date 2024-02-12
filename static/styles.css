@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+/*  background-image: https://unsplash.com/ Albert Amor black-and-white-bird-on-seashore */
+    background-image: url("albert-wall3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainname, .centered-block {
+    margin: 40px 0;
+}
+.mainname {
+    text-align: center;
+    padding: 50px 5px 0px 5px;
+    font-size: 50px;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid #7597a3;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: #454040;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+.centered-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    text-align: center;
+    border: 1px solid gray;
+    padding: 50px 30px;
+    width: auto;
+    justify-content: center;
+    background-color: rgba(71, 61, 31, 0.1);
+}
+
+.movy {
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    padding: 5px 5px 20px 5px;
+    margin: 0;
+    color: #454040;
+}
+
+@media (max-width: 722px) {
+    .centered-block {
+        /* тут было 699 сначала, для Play не подходило */
+        width: auto;
+    }
+    .centered-block.transparent {
+        background-color: transparent;
+        border: none;
+    }
+    .movy {
+        padding: 20px 20px 5px 20px;
+        font-size: 30px;
+        border: 1px solid gray;
+        border-bottom: none;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 20px;
+        border: 1px solid gray;
+        border-top: none;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+/* there was (max-width: 600px) initially */
+@media screen and (max-width: 920px) {
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+}
+
+.button {
+    width: 150px;
+    background-color: #7597a3;
+    border: none;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    margin: 4px 40px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.button:hover {
+    background-color: #cca633;
+    color: white;
+    font-weight: bold;
+}
+
+
+.drop-menu {
+    font-size: 30px;
+    padding: 50px;
+}
+
+select option {
+    font-size: 30px;
+    color: #454040;
+}
+
+select {
+font-size: 30px;
+padding: 5px;
+}
+
+.submit-categ {
+    background-color: #cca633;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 30px;
+    cursor: pointer;
+    min-width: 130px;
+}
+
+.submit-categ:hover {
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 1320px) {
+    #category, #category-bel, #category-rus {
+        margin-bottom: 30px;
+    }
+}
+
+.little-link {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    padding: 10px;
+    color: #8f7424;
+    font-size: 20px;
+}
+
+.little-link2 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    color: #8f7424;
+    font-size: 20px;
+}
+
+.inside-link {
+    padding: 20px;
+    color: #8f7424;
+    font-size: 20px;
+}
+
+.little-link2:hover, .little-link2:active, .little-link:hover, .little-link:active, .inside-link:hover, .inside-link:active {
+    color: #cca633;
+    font-weight: bold;
+
+}
+
+.link-container {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.anagram-text {
+    font-size: 40px;
+    margin: 0;
+    color: #1b1818;
+    padding: 30px;
+}
+
+.no-padding {
+    padding: 0px;
+    height: auto;
+}
+
+.padding-form {
+    display: flex;
+    padding: 30px 100px 50px 100px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+#solution {
+    font-size: 30px;
+    max-width: 200px;
+}
+
+.anagram-number {
+    color: #454040;
+    box-sizing: border-box;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 0 0 0;
+    border-bottom: 1px solid gray;
+    margin: 0 0 10px 0;
+    width: 100%;
+}
+
+
+img.little-link {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+img.little-link:hover {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.popover {
+    max-width: 200px;
+    white-space: normal !important;
+}
+
+
+@media (max-width: 480px) {
+
+    body {
+        display: block;
+    }
+
+    .mainname {
+        padding: 40px 0px 0px 0px;
+        font-size: 35px;
+        letter-spacing: 1.2px;
+        position: static;
+        width: 100%;
+
+    }
+
+    .centered-block {
+        font-size: 16px;
+        margin: 0;
+        position: relative;
+        transform: none;
+        left: auto;
+        margin-top: 20%;
+        border: none;
+        padding: 0;
+        width:100%;
+    }
+
+    .transparent {
+        padding: 0;
+    }
+
+    .movy {
+        font-size: 20px;
+        padding: 20px 50px 5px 50px;
+    }
+
+    .drop-menu * {
+        font-size: 16px;
+        width: auto;
+    }
+
+    .no-padding, .transparent  {
+        display: block;
+    }
+
+
+
+
+}
